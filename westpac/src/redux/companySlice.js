@@ -1,4 +1,3 @@
-// src/redux/companySlice.js
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../sample-data.json";
 

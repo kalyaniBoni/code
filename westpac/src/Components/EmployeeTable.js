@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const EmployeeTable = ({ data, handleRowClick }) => {
-  const itemsPerPage = 5; // Display 5 items per page
+  const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredData, setFilteredData] = useState(data?.employees || []);
@@ -80,7 +80,6 @@ const EmployeeTable = ({ data, handleRowClick }) => {
         </div>
       </div>
 
-      {/* Responsive design*/}
       <div className="sm:hidden">
         {currentItems?.map((employee) => (
           <div
@@ -106,7 +105,6 @@ const EmployeeTable = ({ data, handleRowClick }) => {
         ))}
       </div>
 
-      {/* Table Layout for Tablet and Larger Screens */}
       <div className="hidden sm:block">
         <table className="border border-solid border-black w-full table-auto">
           <thead className="border-b border-black">
@@ -141,7 +139,6 @@ const EmployeeTable = ({ data, handleRowClick }) => {
         </table>
       </div>
 
-      {/* Pagination controls */}
       <div className="flex justify-end mt-4 space-x-2">
         <button
           onClick={handlePrevPage}

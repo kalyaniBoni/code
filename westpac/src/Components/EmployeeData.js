@@ -32,7 +32,6 @@ export default function EmployeeData() {
         <div className="mt-2">
           <EmployeeTable data={employees} handleRowClick={handleRowClick} />
         </div>
-        {/* React Modal */}
         {showModal && (
           <Modal
             isOpen={showModal}

@@ -4,7 +4,6 @@ import "@testing-library/jest-dom";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 
-// Mock Data
 const mockEmployees = [
   {
     id: "90d3669e-3093-439c-8ca0-1bf746922c5d",
@@ -134,24 +133,4 @@ describe("EmployeeTable Component", () => {
     const employee6 = await screen.findAllByText("hari Kunar");
     expect(employee6.length).toBeGreaterThan(1);
   });
-
-  //   test("should call handleRowClick when a row is clicked", async () => {
-  //     const handleRowClickMock = jest.fn();
-  //     render(
-  //       <Provider store={store}>
-  //         <EmployeeTable
-  //           data={mockEmployees}
-  //           handleRowClick={handleRowClickMock}
-  //         />
-  //       </Provider>
-  //     );
-
-  //     const employeeRow = await screen
-  //       .findByText("Matilda Muller")
-  //       .parentElement.closest("tr");
-
-  //     // Fire click on the row
-  //     fireEvent.click(employeeRow);
-  //     expect(handleRowClickMock).toHaveBeenCalledWith(mockEmployees[0]);
-  //   });
 });

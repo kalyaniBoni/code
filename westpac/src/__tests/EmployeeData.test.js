@@ -12,7 +12,6 @@ jest.mock("react-redux", () => ({
 }));
 
 describe("EmployeeData Component", () => {
-  // mocking the data
   const employees = [
     {
       id: "90d3669e-3093-439c-8ca0-1bf746922c5d",
